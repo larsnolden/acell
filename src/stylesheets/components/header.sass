@@ -10,18 +10,22 @@
     transform: translateX(-50%)
 
   .nav
-    margin-top: 40px
+    position: fixed
+    width: 100%
+    padding: 1em
     align-items: center
     display: flex
     flex-flow: row nowrap 
-    align-items: center
     justify-content: center
+    z-index: 1
+    background: rgb(99.9%, 93.2%, 0%)
+
+    
     
     a
       color: rgb(13.6%, 13.2%, 7%)
       font-size: 2em
       margin: 0 10px 0 10px
-      display: flex
     
     a:hover
      text-decoration: underline
@@ -32,7 +36,6 @@
 
     @media screen and (min-width: 769px)
       flex-direction: row
-
       
 
 
