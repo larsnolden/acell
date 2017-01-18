@@ -1,0 +1,53 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="header row">
+   <div class="nav">
+     <a href="#" data-module="scroll">FAQ</a>
+     <a href="#" data-module="scroll">Apply</a>
+   </div><!-- col -->
+   <img src="/images/logo.png">
+ </div><!-- /.row -->
+
+ <div class="text row">
+   <div class="wrapper">
+     <h1>Acell</h1>
+     <p>We are a digital agency that delivers high quality products to nonprofits and social organizations at Zero cost.<br>We create products that provide a lasting user experience and create a real impact on the user</p>
+     <div class="percent">
+     </div><!--percent-->
+   </div><!--wrapper-->
+ </div><!--row-->
+
+ <div id="faq" class="faq">
+
+   {% for item in faq %}
+   <div class="wrapper">
+    <div class="question">
+      {{item.question}}
+    </div><!--question-->
+    <div class="answer">
+      {{item.answer}}
+    </div><!--answer-->
+   </div><!--wrapper-->
+   {% endfor %}
+
+ </div><!--faq-->
+
+ <div id="apply" class="apply text row">
+  <div class="wrapper"> 
+   <h1>Apply</h1>
+   <p>Acell provides you with an envrionment to learn and grow your social skills. Join us and work on real projects in a fantastic team</p>
+   <h2>About you:</h2>
+   <p>You are a person that is driven by the process of creation. You have a clear set of goals for your life and one of them is to get better at delivering products. Experience is one of the most valuable things in your life and you are ready with investing time and effort in building your skills.</p>
+   <h2><span class="glyphicon glyphicon-sunglasses"></span>Developer</h2>
+   <p>As a Software Developer you should at least have built a few things for yourself or others that you can show us and explain why you build them.</p>
+   <p><span class"inlineTitle">Frontend: You “mastered” HTML and CSS and have built something with technologies like Ajax, ES6, React/Angularor similar</p>
+   <p><span class"inlineTitle">Backend: You build something with Python, NodeJS or simillar. Knowledge of RESTfull API’s and Database Engineering would get you some Karma points.</p>
+   <h2><span class="glyphicon glyphicon-ice-lolly-tasted"></span>NON Developer</h2>
+   <p>Your identify yourself as a UI Designer, Product Manager, User Experience Evangelist or anything else that is needed to build digital products. Let us know!</p>
+   <button>Join us</button>
+  </div><!-- wrapper -->
+ </div><!-- apply -->
+</div><!-- container -->
+{% endblock %}
